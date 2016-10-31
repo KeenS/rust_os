@@ -1,0 +1,7 @@
+target
+Cargo.lock
+*.o
+*.iso
+kernel.bin
+build/
+
