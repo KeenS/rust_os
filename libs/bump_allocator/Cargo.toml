@@ -1,0 +1,9 @@
+[package]
+authors = ["Sunrin SHIMURA (keen) <3han5chou7@gmail.com>"]
+name = "bump_allocator"
+version = "0.1.0"
+workspace = "../../"
+
+[dependencies]
+spin = "0.4.5"
+

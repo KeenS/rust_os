@@ -1,20 +1,26 @@
 [package]
+authors = ["Sunrin SHIMURA (keen) <3han5chou7@gmail.com>"]
 name = "myos"
 version = "0.1.0"
-authors = ["Sunrin SHIMURA (keen) <3han5chou7@gmail.com>"]
-
-[lib]
-crate-type=["staticlib"]
 
 [dependencies]
+bitflags = "0.7.0"
+once = "0.3.2"
 rlibc = "0.1.4"
 spin = "0.3.4"
-bitflags = "0.7.0"
 
+[dependencies.hole_list_allocator]
+path = "libs/hole_list_allocator"
 
 [dependencies.multiboot2]
 git = "https://github.com/phil-opp/multiboot2-elf64"
 
 [dependencies.x86]
-version = "0.6.0"
 default-features = false
+version = "0.6.0"
+
+[lib]
+crate-type = ["staticlib"]
+
+[workspace]
+members = ["libs/hole_list_allocator"]
